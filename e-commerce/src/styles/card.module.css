@@ -1,17 +1,27 @@
-.image{
-    border: solid 2px red;
-    height: auto;
-    width: 50%;
+.image {
+  border: solid 2px red;
+  height: auto;
+  width: 50%;
 }
 
-.row{
-    flex: 1 1 160px
+.row {
+  flex: 1 1 160px;
 }
 
-.cont{
-   border: solid 2px blue;
-   display: flex;
-   flex-wrap: wrap;
+.cont {
+  border: solid 2px blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+
+  /* display: flex;
+   flex-wrap: wrap; */
+}
+@media only screen and (max-width: 768px) {
+  .cont {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
 }
 
 /* .col{
