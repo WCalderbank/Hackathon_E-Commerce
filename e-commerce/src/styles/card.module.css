@@ -1,0 +1,21 @@
+.image{
+    border: solid 2px red;
+    height: auto;
+    width: 50%;
+}
+
+.row{
+    flex: 1 1 160px
+}
+
+.cont{
+   border: solid 2px blue;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+/* .col{
+    display: flex;
+    flex-direction: row;
+
+} */
