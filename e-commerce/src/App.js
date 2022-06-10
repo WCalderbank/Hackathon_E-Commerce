@@ -2,9 +2,11 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import BasicExample from "./components/Card";
+import { FaHeart } from "react-icons/fa";
 
 function App() {
   const [data, setData] = useState("");
+  const [favourite, setFavourite] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,16 +19,19 @@ function App() {
 
   console.log(data);
 
+  const selectFave = () => {
+    setFavourite(!favourite);
+  };
+
   return (
     <div className="App">
       <h1 style={{ textAlign: "center", fontWeight: 200 }}>
         Welcome to NORTH & SOUTH FACE
       </h1>
       <div>
-      {/* {data.map((a, id)=>(
+        {/* {data.map((a, id)=>(
         <h3 key={id}>{a.title}</h3>
       ))} */}
-      
         {Array.from(data).map((a, id) => (
           <Card key={id} style={{ width: "18rem" }}>
             <Card.Img variant="top" src={a.image} />
@@ -37,7 +42,14 @@ function App() {
             </Card.Body>
           </Card>
         ))}
-        ;
+
+        <button
+          className="fave-btn"
+          onClick={() => selectFave()}
+          color={favourite ? "red" : "black"}
+        >
+          <FaHeart />
+        </button>
       </div>
     </div>
   );
