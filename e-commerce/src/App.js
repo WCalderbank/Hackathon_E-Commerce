@@ -22,7 +22,7 @@ function App() {
 
 
   return <div className="App">Hi team
-      <h1 style={{ textAlign: 'center', fontWeight: 200 }} >Welcome to NORTH and SOUTH</h1>
+      <h1 style={{ textAlign: 'center', fontWeight: 200 }} >Welcome to NORTH & SOUTH FACE</h1>
       <div>
         {data.map((a, id)=>(
           <div key={id}>
