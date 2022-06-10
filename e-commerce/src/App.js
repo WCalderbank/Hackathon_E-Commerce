@@ -19,9 +19,9 @@ function App() {
 
   console.log(data);
 
-  const selectFave = () => {
-    setFavourite(!favourite);
-  };
+  // const selectFave = () => {
+  //   setFavourite(!favourite);
+  // };
 
   return (
     <div className="App">
@@ -40,16 +40,14 @@ function App() {
               <Card.Text>{a.description}</Card.Text>
               <Card.Text>{a.category}</Card.Text>
             </Card.Body>
+            <button
+              className="fave-btn"
+              onClick={() => setFavourite((favourite) => !favourite)}
+            >
+              <FaHeart color={favourite ? "#eee" : "red"} />
+            </button>
           </Card>
         ))}
-
-        <button
-          className="fave-btn"
-          onClick={() => selectFave()}
-          color={favourite ? "red" : "black"}
-        >
-          <FaHeart />
-        </button>
       </div>
     </div>
   );
