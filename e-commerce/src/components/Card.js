@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import css from '../styles/card.module.css'
+import { FaHeart } from "react-icons/fa";
 
 function ContentCard() {
     const [data, setData] = useState("");
+    const [favourite, setFavourite] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,13 +24,19 @@ function ContentCard() {
     {Array.from(data).map((a, id) => (
         <Row key={id} className={css.row}>
         <Col className={css.col} >
-          <Card  style={{ width: "12rem" }}>
+          <Card  className={css.card}>
             <Card.Img className={css.image} variant="top" src={a.image} />
             <Card.Body>
-              <Card.Title>{a.title}</Card.Title>
-              <Card.Text>{a.description}</Card.Text>
-              <Card.Text>{a.category}</Card.Text>
+              <Card.Title className={css.title} >{a.title}</Card.Title>
+              <Card.Text className={css.text} >{a.description}</Card.Text>
+              <Card.Text className={css.cat}>{a.category}</Card.Text>
             </Card.Body>
+            <button
+              className={css.fave}
+              onClick={() => setFavourite((favourite) => !favourite)}
+            >
+              <FaHeart color={favourite ? "grey" : "red"} />
+            </button>
           </Card>
           </Col>
           </Row>

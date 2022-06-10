@@ -1,0 +1,11 @@
+.Home{
+    background-color: white ;
+    height: auto;
+}
+
+.Name{
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 5px solid bisque;
+    padding-bottom: 3px;
+}
