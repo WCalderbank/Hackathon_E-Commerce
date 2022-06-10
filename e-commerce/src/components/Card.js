@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import css from '../styles/card.module.css'
 import { FaHeart } from "react-icons/fa";
 
+//Function to map and generate a card for each item
 function ContentCard() {
     const [data, setData] = useState("");
     const [favourite, setFavourite] = useState(false);

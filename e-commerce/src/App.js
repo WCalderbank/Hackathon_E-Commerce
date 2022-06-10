@@ -1,10 +1,8 @@
 import css from "./styles/home.module.css"
 import ContentCard from "./components/Card";
 
-
+//The main page
 function App() {
-
-
   return (
     <div className={css.Home}>
       <h1 className={css.Name}>
