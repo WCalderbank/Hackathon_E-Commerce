@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
+import BasicExample from "./components/Card";
 
 function App() {
   const [data, setData] = useState("");
@@ -22,7 +23,11 @@ function App() {
         Welcome to NORTH & SOUTH FACE
       </h1>
       <div>
-        {data.map((a, id) => (
+      {/* {data.map((a, id)=>(
+        <h3 key={id}>{a.title}</h3>
+      ))} */}
+      
+        {Array.from(data).map((a, id) => (
           <Card key={id} style={{ width: "18rem" }}>
             <Card.Img variant="top" src={a.image} />
             <Card.Body>
@@ -38,4 +43,4 @@ function App() {
   );
 }
 
-export default App();
+export default App;
