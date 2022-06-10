@@ -30,14 +30,15 @@
 
 .title{
     font-weight: bolder;
+    color: rgb(48, 48, 114);
 }
 
 .text{
     font-weight: lighter;
     overflow: hidden;
-    border: solid 1px #3a3238;
+    /* border: solid 1px #3a3238;
     box-shadow: 2px 2px 2px 2px rgb(202, 191, 177);
-    margin: 0.7em;
+    margin: 0.7em; */
 }
 
 .cat{

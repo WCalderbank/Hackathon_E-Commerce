@@ -30,7 +30,7 @@ function ContentCard() {
             <Card.Body>
               <Card.Title className={css.title} >{a.title}</Card.Title>
               <Card.Text className={css.text} >{a.description}</Card.Text>
-              <Card.Text className={css.cat}>{a.category}</Card.Text>
+              <Card.Text className={css.cat}>Category: {a.category}</Card.Text>
               <Card.Text className={css.price}>£{a.price}</Card.Text>
             </Card.Body>
             <button
