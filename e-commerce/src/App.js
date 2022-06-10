@@ -22,14 +22,20 @@ function App() {
 
 
   return <div className="App">Hi team
-      <h1>Welcome to NORTH and SOUTH</h1>
+      <h1 style={{ textAlign: 'center', fontWeight: 200 }} >Welcome to NORTH and SOUTH</h1>
       <div>
         {data.map((a, id)=>(
           <div key={id}>
           <h4>
             {a.title}
             </h4>
-          <img src={a.image} alt={a.category}/>
+          <img src={a.image} alt={a.category}
+             style={{
+                                    height: '50%',
+                                    width: '50%',
+                                    borderRadius: '10%',
+                                }}
+          />
           <p>{a.description}</p>
             <h6>{a.category}</h6>
           </div>
